@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Cadastro Universitário</title>
+</head>
+<body>
+    <h3>Cadastro Universitário</h3>
+   <div class="container">
+
+    <form autocomplete="off" method="post" onsubmit="getElements()">
+     <label for="nome">Nome:</label>
+     <input type="text" id="nome" placeholder="Insira o nome" name="nome" required>
+
+     <label for="cpf">CPF:</label>
+     <input type="text" id="cpf" placeholder="Insira o CPF" name="cpf" required>
+
+    <br>
+     <div class="radio-sexo">
+           <label>Sexo:</label>
+           <input type="radio"  name="sexo" value="masculino" checked="checked">
+           <label for="html">Masculino</label><br>
+           <input type="radio"  name="sexo" value="feminino">
+           <label for="css">Feminino</label><br>
+         
+    </div>
+
+     <label for="endereco">Endereço:</label>
+     <input type="text" id="endereco" placeholder="Insira o Endereço" name="endereco" required>
+
+     <label for="datadenascimento">Data de Nascimento:</label>
+     <input type="date" id="datadenascimento" name="datadenascimento" required>
+
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" placeholder="Insira o E-mail" required>
+
+     <label for="curso">Curso:</label>
+     <input type="text" id="curso" name="curso" placeholder="Insira o Curso"  required>
+
+     <label for="matricula">Matricula:</label>
+     <input type="text" id="matricula" name="matricula" placeholder="Insira a Matrícula" required>
+
+     <label for="turno">Turno:</label>
+
+     <select id="turno">
+       <option value="manha" selected>Manhã</option>
+       <option value="vespertino">Vespertino</option>
+       <option value="noturno">Noturno</option>
+       <option value="integral">Integral</option>
+     </select>
+
+       <button>Enviar</button>
+    </form>
+   </div>
+</body>
+</html>
