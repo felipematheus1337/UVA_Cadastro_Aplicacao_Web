@@ -6,7 +6,6 @@ function getElements() {
     if(!validarCPF(testeCpf)) {
       alert('cpf invalido')
       return 0;
-    
     }
 
     let nome = getFirstLetterToUpperCase(document.getElementById("nome").value);
@@ -21,6 +20,9 @@ function getElements() {
     let id = idGenerator()
 
 
+    if(compareSensitiveValues(cpf,matricula,email)) {
+      return;
+    }
     
 
     const aluno = {
@@ -108,4 +110,36 @@ function validarCPF(inputCPF){
   return true;
 }
 
+
+compareSensitiveValues = (cpf,matricula,email) => {
+let listOfStudentsCpf = JSON.parse(localStorage.getItem('students')) || null;
+let iSnegative = false;
+
+if(listOfStudentsCpf != null) {
+    iSnegative = listOfStudentsCpf.find(function(iSnegative) {
+    if(iSnegative.cpf === cpf) {
+      alert("cpf já cadastrado")
+      return true;
+    } 
+    else if(iSnegative.email === email) {
+      alert("email já cadastrado")
+      return true;
+    }
+    else if(iSnegative.matricula === matricula) {
+      alert("matricula já cadastrada")
+      return true;
+
+    } else {
+      return false;
+    }
+  }) || false;
+  return iSnegative;
+}
+
+
+
+
+return iSnegative;
+
+}
 
