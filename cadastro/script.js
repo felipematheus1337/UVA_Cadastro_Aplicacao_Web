@@ -1,10 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+});
+
+
+
+
 
 function getElements() {
     event.preventDefault();
     let testeCpf = document.getElementById("cpf").value;
 
     if(!validarCPF(testeCpf)) {
-      alert('cpf invalido')
+      M.toast({html: 'cpf invalido!'},{displayLength: 2500},{classes:'toast'})
       return 0;
     }
 
@@ -46,8 +54,10 @@ function getElements() {
 }
 
 function getSexoChecked() {
-    let sexos = document.getElementsByName('sexo')
+    let sexos = document.getElementsByName('sexo');
     let sexoChecked;
+    console.log(sexos);
+    console.log(sexos.length)
     for(let i = 0; i < sexos.length; i++) {
       if(sexos[i].checked) {
         if(i === 0) {
@@ -118,15 +128,15 @@ let iSnegative = false;
 if(listOfStudentsCpf != null) {
     iSnegative = listOfStudentsCpf.find(function(iSnegative) {
     if(iSnegative.cpf === cpf) {
-      alert("cpf já cadastrado")
+      M.toast({html: 'cpf  já cadastrado!'},{displayLength: 2500},{classes:'toast'})
       return true;
     } 
     else if(iSnegative.email === email) {
-      alert("email já cadastrado")
+      M.toast({html: 'email já cadastrado'},{displayLength: 2500},{classes:'toast'})
       return true;
     }
     else if(iSnegative.matricula === matricula) {
-      alert("matricula já cadastrada")
+      M.toast({html: 'matricula já cadastrada!'},{displayLength: 2500},{classes:'toast'})
       return true;
 
     } else {

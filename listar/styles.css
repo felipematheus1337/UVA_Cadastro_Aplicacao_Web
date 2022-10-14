@@ -1,77 +1,87 @@
 html,body {
-    background-color: rgb(37,31,31);
+    background-color: #212121;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
 	height: 100%;
 	width: 100%;
-	left: 0px;
-	top: 0px;
+	
 }
 
 .container {
-    display:flex;
-    margin: 0 auto;
-    width: auto;
-    height: fit-content;
-    max-width: 1200px;   
+    display: flex;
     flex-direction: row;
-    height: auto;
+    width: 100vh;
+    max-width: 100%;  
     flex-wrap: wrap;
-   
-    
-    
 }
-
-
-
-
 
 h1 {
     text-align: center;
     color: #fcbe24;
-    border-bottom: 1px solid white;
     margin-bottom: 20px;
 }
 
-.result h3 {
+
+.collapsible {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: justify;
+    border: none;
+}
+
+.collapsible-body i:hover {
+    color: #fcbe24;
+}
+
+
+.collapsible li {
+    border-radius: 20px;
+    text-decoration: none;
+    list-style: none;
+    text-align: justify;
+    margin: 35px;
+    width: 243px;
+    
+    
+}
+
+
+.collapsible h3 {
     background-color: black;
     color: #fcbe24;
-    border-radius: 8px;
     text-align: center;
     width: 300px;
     
 }
 
-
-
-.result {
-    color: rgb(48, 45, 45);
-    border-radius: 15px;
-    text-align: center;
+.collapsible-body {
     background-color: rgb(197, 192, 192);
-    width: 350px;
-    margin: 10px auto;
    
- 
+}
 
+
+
+
+
+.collapsible-header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  
     
 }
 
 
-
-.result li {
-    text-decoration: none;
-    list-style: none;
-    text-align: justify;
-    
+.collapsible label{
+  display: inline;
 }
 
-.result label{
-    display: inline;
-}
-
-h5 {
+.collapsible h5 {
 border-bottom: 1px solid black;
+font-size: 1rem;
 
 }
 
@@ -82,11 +92,28 @@ h5:hover {
 }
 
 
+.collapsible h6 {
+    background-color: black;
+    color: #fcbe24;
+    font-size: 1rem;
+    
+    padding: 5px 5px 5px 5px;
+    
+}
 
-h3:hover{
+.collapsible h6:hover {
     background-color: rgb(197, 192, 192);
     color: black;
 }
+
+.collapsible-header i {
+    color: #fcbe24;
+    margin-top: 20px;
+}
+
+
+
+
 
 .notfound {
     color: white;
@@ -104,11 +131,10 @@ h3:hover{
 
 @media (max-width: 411px) {
     .container {
-        display: flex;
-        flex-direction: column;
+        
     }
 
-    .result {
+    .collapsible{
         margin-top: 50px;
     }
     
@@ -117,11 +143,10 @@ h3:hover{
 
   @media (max-width: 732px) {
     .container {
-        display: flex;
-        flex-direction: column;
+       
     }
 
-    .result {
+    .collapsible {
         margin-top: 20px;
     }
     
