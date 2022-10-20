@@ -29,3 +29,9 @@ width="100"
 height="100"/>
 &nbsp;
 </p>
+
+<hr>
+
+<h2> Sobre </h2>
+<p><h4> Um Projeto onde será cadastrado um aluno, havendo uma tela de cadastro inicial, com botão para cadastrar, ou listar esse usuário</h4></p>
+<p><h4>Com utilização de JQuery e VanillaJS na parte do frontend, utilizando localStorage como armazenamento</h4></p>
