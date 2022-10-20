@@ -28,6 +28,14 @@ height="120"/>
 width="100"
 height="100"/>
 &nbsp;
+&nbsp;
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1200px-Bootstrap_logo.svg.png"
+width="150" height="100" />
+&nbsp;
+&nbsp;
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Logo_jQuery.svg/1200px-Logo_jQuery.svg.png"
+width="200" height="100"/>
+&nbsp;  
 </p>
 
 <hr>
